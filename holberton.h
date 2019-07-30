@@ -6,7 +6,7 @@
 int _printf(const char *format, ...);
 int strlength(char *);
 int _putchar(char);
-void print_numbers(int);
+unsigned int  print_number(int, short sign);
 int checkFlag(int *contador, const char **format, va_list chars);
 int length_number(int);
 
