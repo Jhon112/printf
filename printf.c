@@ -10,23 +10,24 @@
 int _printf(const char *format, ...)
 {
 	va_list chars;
-	int i;
 	int contador;
 
-	i = 0;
 	contador = 0;
 	if (format)
 	{
 		va_start(chars, format);
-		while (format != NULL)
+		while (*format != '\0')
 		{
 			if (*format == '%')
 			{
-				checkFlag(&contador, ++format, chars);
+				format++;
+				checkFlag(&contador, &format, chars);
 			}
-			contador += write(1, format, 1);
-			format++;
-			i++;
+			else
+			{
+				contador += write(1, format, 1);
+				format++;
+			}
 		}
 		va_end(chars);
 		return (contador);

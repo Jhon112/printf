@@ -4,7 +4,7 @@
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
-int checkFlag(int *contador, const char *format, va_list chars);
+int checkFlag(int *contador, const char **format, va_list chars);
 int strlength(char *);
 int _putchar(char);
 #endif
