@@ -14,7 +14,7 @@ int checkFlag(int *contador, const char **format, va_list chars)
 	char caracter;
 	char *string;
 	int length;
-
+	int integer;
 	switch (**format)
 	{
 	case 'c':
@@ -37,6 +37,15 @@ int checkFlag(int *contador, const char **format, va_list chars)
 		*contador += 1;
 		*format += 1;
 		return (1);
+
+	case 'd':
+        case 'i':
+                integer = va_arg(chars, int);
+                print_numbers(integer);
+                length = length_number(integer);
+                *contador += length;
+                *format += 1;
+                return (1);
 	default:
 		write(1, *format - 1, 1);
 		*contador += 1;
