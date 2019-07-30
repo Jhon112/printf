@@ -9,12 +9,13 @@
  *
  * Return: 0 if error, 1 otherwise
  */
+
 int checkFlag(int *contador, const char **format, va_list chars)
 {
 	char caracter;
 	char *string;
 	int length;
-	int integer;
+	unsigned int integer;
 
 	switch (**format)
 	{
@@ -38,12 +39,11 @@ int checkFlag(int *contador, const char **format, va_list chars)
 		*contador += 1;
 		*format += 1;
 		return (1);
-
 	case 'd':
 	case 'i':
 		integer = va_arg(chars, int);
-		print_numbers(integer);
-		*contador += length_number(integer);
+		integer = print_number(integer, 1);
+		*contador = *contador + integer;
 		*format += 1;
 		return (1);
 	default:
