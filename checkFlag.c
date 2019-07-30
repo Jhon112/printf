@@ -28,7 +28,7 @@ int checkFlag(int *contador, const char **format, va_list chars)
 	case 's':
 		string = va_arg(chars, char *);
 		if (string == NULL)
-			return (0);
+			string = "(NULL)";
 		length = strlength(string);
 		write(1, string, length);
 		*contador += length;
