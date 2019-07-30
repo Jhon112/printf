@@ -14,7 +14,7 @@ int checkFlag(int *contador, const char **format, va_list chars)
 	char caracter;
 	char *string;
 	int length;
-
+	int integer;
 	switch (**format)
 	{
 	case 'c':
