@@ -42,7 +42,7 @@ int checkFlag(int *contador, const char **format, va_list chars)
 	case 'd':
 	case 'i':
 		integer = va_arg(chars, int);
-		integer = print_number(integer, 1);
+		integer = print_number(integer);
 		*contador = *contador + integer;
 		*format += 1;
 		return (1);
