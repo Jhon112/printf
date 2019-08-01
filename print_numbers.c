@@ -2,30 +2,23 @@
 /**
 * print_number - Prints an integer.
 * @numb: integer to be printed.
-* @value: If number is signed or unsigned.
 * Return: Number of chars printed.
 */
-unsigned int print_number(int numb, short value)
+unsigned int print_number(int numb)
 {
 	unsigned int result;
 	unsigned int diference = 1;
 	unsigned int ch;
 	unsigned int chars = 0;
 
-	if (value)
+	if (numb < 0)
 	{
-		if (numb < 0)
-		{
-			numb *= -1;
-			_putchar('-');
-			chars++;
-		}
-		ch = numb;
+		numb *= -1;
+		_putchar('-');
+		chars++;
 	}
-	else
-	{
-		ch = (unsigned int)numb;
-	}
+	ch = numb;
+
 	while (ch / 10)
 	{
 		diference *= 10;
