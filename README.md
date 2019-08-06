@@ -4,10 +4,7 @@ The printf() function sends formatted output to the standard output (screen).
 
 ## Description
 
-Our own version of C printf() function from stdio library. Our function _printf() replicate t\
-he process the original printf function does, it takes a string as a first arg and makes use \
-of variadic functions to take multiple args. This project is part of the curriculum for Holbe\
-rton School.
+Our own version of C printf() function from stdio library. Our function _printf() replicate the process the original printf function does, it takes a string as a first arg and makes use of variadic functions to take multiple args. This project is part of the curriculum for Holberton School.
 
 ## Usage
 
